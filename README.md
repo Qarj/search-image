@@ -1,4 +1,4 @@
-# search-image.py
+# search-image.py 0.1.1
 
 A snippet of code was posted on stack overflow on how to find one image inside another. The question is here: http://stackoverflow.com/questions/4720168/image-in-image-algorithm
 
@@ -17,11 +17,9 @@ http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv
 
 3. Install numpy-1.6.1-win32-superpack-python2.6.exe
 
-4. Install python-Levenshtein-0.10.1.win32-py2.6.exe
+4. Install PIL-1.1.7.win32-py2.6.exe - Python Image Library
 
-5. Install PIL-1.1.7.win32-py2.6.exe - Python Image Library
-
-6. Check the Environment Variables
+5. Check the Environment Variables
 
    In the Path, C:\Python26\; should be before other versions of Python
 
