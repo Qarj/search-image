@@ -69,6 +69,18 @@ We made a copy of this screen shot and search-image.py marked the found location
 ![Alt text](examples/100-marked.png?raw=true "Hamburger Menu Control")
 
 
+## Caution!
+
+The Open Source Computer Vision (OpenCV) library returns the co-ordinates where the best match is found. It will always return co-ordinates regardless of whether the target image really exists or not. It also returns some numbers representing how confident it is that if found the match - the primary confidence and the alternate confidence.
+
+If you set the threshold too high (100% match), then even very minor changes in how a browser renders the control will result in non matches.
+
+On the other hand, if you set the threshold too low, then you will find matches that do not in fact exist!
+
+After a lot of experimentation with regression testing over the years I have come up with some numbers that seem to work well for the image found threshold.
+
+You may need to update the threshold based on your own use cases.
+
 ## Additional Information
 
 How template matching works:
