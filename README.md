@@ -30,6 +30,45 @@ Note that last time I checked (years ago), versions of Python newer than 2.6.x (
 will not work. This is due to dependencies in the libraries. Python 3.x is also not backwards
 compatible - the print command has been turned into a function for example.
 
+## Usage
+
+```
+search-image.py target_image.png image_to_find.png [markfile.png]
+```
+
+A number of image files are included which you can use with the following examples.
+
+### Example 1
+
+```
+search-image.py examples\100-orig.png examples\menu_hamburger.png
+```
+
+### Example 2
+
+```
+copy examples\100-orig.png marked_result.png
+search-image.py examples\100-orig.png examples\menu_hamburger.png marked_result.png
+search-image.py examples\100-orig.png examples\content_vertical_mobile.png marked_result.png
+```
+
+In this example we are trying to find the hamburger menu control
+
+![Alt text](examples/menu_hamburger.png?raw=true "Hamburger Menu Control")
+
+and also the vertical content
+
+![Alt text](examples/content_vertical_mobile.png?raw=true "Vertical Content")
+
+inside the target image (Selenium WebDriver screen shot)
+
+![Alt text](examples/100-orig.png?raw=true "Mobile View")
+
+We made a copy of this screen shot and search-image.py marked the found locations:
+
+![Alt text](examples/100-marked.png?raw=true "Hamburger Menu Control")
+
+
 ## Additional Information
 
 How template matching works:
