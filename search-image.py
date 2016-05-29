@@ -1,3 +1,5 @@
+# version 0.1.0
+
 # http://stackoverflow.com/questions/4720168/image-in-image-algorithm
 
 #find the image_to_find inside the target_image, if found optionally mark a rectangle on markfile

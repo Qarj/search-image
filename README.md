@@ -8,7 +8,8 @@ This script can be used as part of an automated regression testing framework to 
 
 ## Windows Installation
 
-1. Install python-2.6.6.msi
+1. Install 32-bit python-2.6.6.msi
+   https://www.python.org/download/releases/2.6.6/
 
 2. Install opencv-python-2.4.1.win32-py2.6.exe
 python bindings for OpenCV
