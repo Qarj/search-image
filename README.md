@@ -71,7 +71,7 @@ We made a copy of this screen shot and search-image.py marked the found location
 
 ## Caution!
 
-The Open Source Computer Vision (OpenCV) library returns the co-ordinates where the best match is found. It will always return co-ordinates regardless of whether the target image really exists or not. It also returns some numbers representing how confident it is that if found the match - the primary confidence and the alternate confidence.
+The Open Source Computer Vision (OpenCV) library returns the co-ordinates where the best match is found. It will always return co-ordinates regardless of whether the target image really exists or not. It also returns some numbers representing how confident it is that it found the match - the "primary confidence" and the "alternate confidence".
 
 If you set the threshold too high (100% match), then even very minor changes in how a browser renders the control will result in non matches.
 
