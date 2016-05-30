@@ -1,4 +1,4 @@
-# search-image.py 0.1.1
+# search-image.py 0.2.0
 
 A snippet of code was posted on stack overflow on how to find one image inside another. The question is here: http://stackoverflow.com/questions/4720168/image-in-image-algorithm
 
@@ -8,26 +8,28 @@ This script can be used as part of an automated regression testing framework to 
 
 ## Windows Installation
 
-1. Install 32-bit python-2.6.6.msi
-   https://www.python.org/download/releases/2.6.6/
+1. Install 32-bit python-2.7.11.msi from
+   https://www.python.org/downloads/release/python-2711/
 
-2. Install opencv-python-2.4.1.win32-py2.6.exe
-python bindings for OpenCV
-http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv
+   Choose the option to install `python.exe` in the path which will ensure that `C:\Python` and `C:\Python\Scripts` are added to the path for you
 
-3. Install numpy-1.6.1-win32-superpack-python2.6.exe
+2. Ensure pip is up to date
+    ```
+    python -m pip install --upgrade pip
+    ```
 
-4. Install PIL-1.1.7.win32-py2.6.exe - Python Image Library
+3. Download python bindings for OpenCV, `opencv_python-2.4.13-cp27-cp27m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv and install
+    ```
+    pip install opencv_python-2.4.13-cp27-cp27m-win32.whl
+    ```
 
-5. Check the Environment Variables
+4. Download numpy, `numpy-1.10.4+mkl-cp27-cp27m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy and install
+    ```
+    pip install numpy-1.10.4+mkl-cp27-cp27m-win32.whl
+    ```
 
-   In the Path, C:\Python26\; should be before other versions of Python
-
-   Ensure PYTHONHOME=C:\Python26\ for imageinimage.py to work
-
-Note that last time I checked (years ago), versions of Python newer than 2.6.x (e.g. 2.7.x or 3.x.x)
-will not work. This is due to dependencies in the libraries. Python 3.x is also not backwards
-compatible - the print command has been turned into a function for example.
+4. Download Python Image Library, Python Imaging Library 1.1.7 for Python 2.7, from http://www.pythonware.com/products/pil/ and install
+   (the exe is `PIL-1.1.7.win32-py2.7.exe`)
 
 ## Usage
 

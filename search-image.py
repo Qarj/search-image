@@ -1,4 +1,4 @@
-# version 0.1.1
+# version 0.2.0
 
 # http://stackoverflow.com/questions/4720168/image-in-image-algorithm
 
