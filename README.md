@@ -4,7 +4,7 @@ A snippet of code was posted on stack overflow on how to find one image inside a
 
 search-image.py implements this and also optionally draws a red rectangle around the location of the found image.
 
-This script can be used as part of an automated regression testing framework to check for browser compatibility issues. For a responsive website you could check that the right version of the controls are being shown for a give horizontal resolution.
+This script can be used as part of an automated regression testing framework to check for browser compatibility issues. For a responsive website you could check that the right version of the controls are being shown for a given horizontal resolution.
 
 ## Windows Installation
 
