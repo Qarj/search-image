@@ -8,24 +8,26 @@ This script can be used as part of an automated regression testing framework to 
 
 ## Windows Installation
 
-1. Install 32-bit python-2.7.11.msi from
-   https://www.python.org/downloads/release/python-2711/
+Note that the version numbers specified are correct at time of writing. They are frequently updated so you might need to look for newer versions of the time files. Be sure to stick with Python 2.7.* and 32 bit.
 
-   Choose the option to install `python.exe` in the path which will ensure that `C:\Python` and `C:\Python\Scripts` are added to the path for you
+1. Install 32-bit x86 python-2.7.13.msi from
+   https://www.python.org/downloads/release/python-2713/
+
+   Choose the option to install `python.exe` in the path which will ensure that `C:\Python27` and `C:\Python27\Scripts` are added to the path for you
 
 2. Ensure pip is up to date
     ```
     python -m pip install --upgrade pip
     ```
 
-3. Download python bindings for OpenCV, `opencv_python-2.4.13-cp27-cp27m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv and install
+3. Download python bindings for OpenCV, `opencv_python-2.4.13.2-cp27-cp27m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv (then change to the directory where it is downloaded to) and install
     ```
-    pip install opencv_python-2.4.13-cp27-cp27m-win32.whl
+    pip install opencv_python-2.4.13.2-cp27-cp27m-win32.whl
     ```
 
-4. Download numpy, `numpy-1.10.4+mkl-cp27-cp27m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy and install
+4. Download numpy, `numpy-1.11.3+mkl-cp27-cp27m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy and install
     ```
-    pip install numpy-1.10.4+mkl-cp27-cp27m-win32.whl
+    pip install numpy-1.11.3+mkl-cp27-cp27m-win32.whl
     ```
 
 4. Download Python Image Library, Python Imaging Library 1.1.7 for Python 2.7, from http://www.pythonware.com/products/pil/ and install
