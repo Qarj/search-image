@@ -1,3 +1,5 @@
+#!/usr/bin/env python2.7
+
 # version 0.2.0
 
 # http://stackoverflow.com/questions/4720168/image-in-image-algorithm
