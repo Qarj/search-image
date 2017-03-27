@@ -1,0 +1,5 @@
+#search-image files to ignore
+
+output/
+temp/
+marked_result.png

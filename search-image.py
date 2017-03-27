@@ -24,13 +24,33 @@ else:
 # copy examples\100-orig.png marked_result.png
 # search-image.py examples\100-orig.png examples\menu_hamburger.png marked_result.png
 
+print '\nSTEP 1: Load images and get dimensions - x,y'
+
 im = cv.LoadImage(target_image)
 tmp = cv.LoadImage(image_to_find)
 
 image_size = cv.GetSize(im)
 template_size = cv.GetSize(tmp)
+
+print 'DEBUG:image_size', image_size
+print 'DEBUG:template_size', template_size
+print ('DEBUG:image_size is of type', type(image_size))
+
+print '\nSTEP 2: Calculate result_size'
+
 result_size = [ s[0] - s[1] + 1 for s in zip(image_size, template_size) ]
+
+print 'DEBUG:result_size - x,y', result_size
+
+print '\nSTEP 3: Use Computer Vision to create a result image of the desired result_size'
+
+print 'DEBUG:CreateImage doco:', cv.CreateImage.__doc__
+
 result = cv.CreateImage(result_size, cv.IPL_DEPTH_32F, 1)
+
+print 'DEBUG:result', result
+
+print "\n"
 
 #CV_TM_SQDIFF is the match method, smaller min_val means better match. min_loc is the best match location
 #with other matching methods you need to look at max_val and max_loc
