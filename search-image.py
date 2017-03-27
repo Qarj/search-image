@@ -25,7 +25,7 @@ else:
 # copy examples\100-orig.png marked_result.png
 # search-image.py examples\100-orig.png examples\menu_hamburger.png marked_result.png
 
-print ('\nSTEP 1: Load images and get dimensions - y,x')
+#print ('\nSTEP 1: Load images and get dimensions - y,x')
 
 im = cv2.imread(target_image)
 tmp = cv2.imread(image_to_find)
@@ -35,16 +35,16 @@ tmp = cv2.imread(image_to_find)
 image_size = im.shape[:2]
 template_size = tmp.shape[:2]
 
-print ('DEBUG:image_size', image_size)
-print ('DEBUG:template_size', template_size)
-print ('DEBUG:image_size is of type', type(image_size))
+print ('image_size (y,x)', image_size)
+print ('template_size (y,x)', template_size)
+#print ('DEBUG:image_size is of type', type(image_size))
 
-print ('\nSTEP 2: Calculate result_size')
+#print ('\nSTEP 2: Calculate result_size')
 
-result_size = [ s[0] - s[1] + 1 for s in zip(image_size, template_size) ]
-result_size = [ result_size[1], result_size[0] ] # reverse values to change y,x to x,y
+#result_size = [ s[0] - s[1] + 1 for s in zip(image_size, template_size) ]
+#result_size = [ result_size[1], result_size[0] ] # reverse values to change y,x to x,y
 
-print ('DEBUG:result_size - x,y', result_size)
+#print ('DEBUG:result_size - x,y', result_size)
 
 #print ('\nSTEP 3: Use Computer Vision to create a result image of the desired result_size')
 
@@ -59,22 +59,21 @@ print ('DEBUG:result_size - x,y', result_size)
 #http://docs.opencv.org/doc/tutorials/imgproc/histograms/template_matching/template_matching.html
 
 
-print ('\nSTEP 4: Match Tempalte')
+#print ('\nSTEP 4: Match Tempalte')
 
 #cv2.MatchTemplate(im, tmp, result, cv2.CV_TM_SQDIFF)
 result = cv2.matchTemplate(im, tmp, cv2.TM_SQDIFF)
 
-print ('DEBUG:my_result', result)
+#print ('DEBUG:result', result)
 
 
-print ('\nSTEP 5: Get the Min Max Loc')
+#print ('\nSTEP 5: Get the Min Max Loc')
 
 min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
 
-print ('\n')
+#print ('\n')
 
-
-print ('result', result)
+#print ('result', result)
 print ('min_val', min_val)
 print ('max_val', max_val)
 print ('min_loc', min_loc, 'X')

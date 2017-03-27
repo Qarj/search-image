@@ -8,7 +8,7 @@ This script can be used as part of an automated regression testing framework to 
 
 ## Windows Installation
 
-Note that the version numbers specified are correct at time of writing. They are frequently updated so you might need to look for newer versions of the time files. Be sure to stick with Python 2.7.* and 32 bit.
+Note that the version numbers specified are correct at time of writing. They are frequently updated so you might need to look for newer versions of the time files. Be sure to stick with Python 3.6.* and 32 bit.
 
 1. Install 32-bit Python 3.x from https://www.python.org/downloads/
 
@@ -24,14 +24,14 @@ Note that the version numbers specified are correct at time of writing. They are
     pip install opencv_python-3.2.0-cp36-cp36m-win32.whl
     ```
 
-4. Download numpy, `numpy-1.12.1+mkl-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy and install
-    ```
-    pip install numpy-1.12.1+mkl-cp36-cp36m-win32.whl
-    ```
-
-5. Download Pillow, `Pillow-3.4.2-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow and install
+4. Download Pillow, `Pillow-3.4.2-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow and install
     ```
     pip install Pillow-3.4.2-cp36-cp36m-win32.whl
+    ```
+
+5. Optional - Download numpy, `numpy-1.12.1+mkl-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy and install
+    ```
+    pip install numpy-1.12.1+mkl-cp36-cp36m-win32.whl
     ```
 
 ## Usage
