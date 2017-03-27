@@ -29,7 +29,7 @@ Note that the version numbers specified are correct at time of writing. They are
     pip install Pillow-3.4.2-cp36-cp36m-win32.whl
     ```
 
-5. Optional - Download numpy, `numpy-1.12.1+mkl-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy and install
+5. Download numpy (used by OpenCV), `numpy-1.12.1+mkl-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy and install
     ```
     pip install numpy-1.12.1+mkl-cp36-cp36m-win32.whl
     ```
