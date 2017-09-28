@@ -10,18 +10,20 @@ This script can be used as part of an automated regression testing framework to 
 
 Note that the version numbers specified are correct at time of writing. They are frequently updated so you might need to look for newer versions of the time files. Be sure to stick with Python 3.6.* and 32 bit.
 
-1. Install 32-bit Python 3.x from https://www.python.org/downloads/
+1. Install 32-bit Python 3.6.x from https://www.python.org/downloads/
 
    Choose the option to add `python.exe` to the path.
+   
+   I suggest customising the installation to install to C:\Python36 and to install for all users.
 
 2. Ensure pip is up to date
     ```
     python -m pip install --upgrade pip
     ```
 
-3. Download python bindings for OpenCV, `opencv_python-3.2.0-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv (then change to the directory where it is downloaded to) and install
+3. Download python bindings for OpenCV, `opencv_python-3.3.0-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv (then change to the directory where it is downloaded to) and install
     ```
-    pip install opencv_python-3.2.0-cp36-cp36m-win32.whl
+    pip install opencv_python-3.3.0-cp36-cp36m-win32.whl
     ```
 
 4. Download Pillow, `Pillow-3.4.2-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow and install
@@ -29,9 +31,9 @@ Note that the version numbers specified are correct at time of writing. They are
     pip install Pillow-3.4.2-cp36-cp36m-win32.whl
     ```
 
-5. Download numpy (used by OpenCV), `numpy-1.12.1+mkl-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy and install
+5. Download numpy (used by OpenCV), `numpy-1.13.2+mkl-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy and install
     ```
-    pip install numpy-1.12.1+mkl-cp36-cp36m-win32.whl
+    pip install numpy-1.13.2+mkl-cp36-cp36m-win32.whl
     ```
 
 ## Usage
