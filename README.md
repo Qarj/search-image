@@ -15,6 +15,7 @@ Note that the version numbers specified are correct at time of writing. They are
    Choose the option to add `python.exe` to the path.
    
    I suggest customising the installation to install to C:\Python36 (so there is no space in the path) and to install for all users.
+   Also delete any existing Python installation folders by hand (after uninstalling by Add / Remove Programs) since the left behind libraries will cause many problems.
 
 2. Open command prompt as admin, then ensure pip is up to date
     ```
