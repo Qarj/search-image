@@ -10,9 +10,11 @@ This script can be used as part of an automated regression testing framework to 
 
 Note that the version numbers specified are correct at time of writing. They are frequently updated so you might need to look for newer versions of the time files. Be sure to stick with Python 3.6.* and 32 bit.
 
-1. Install 64-bit Python 3.x from https://www.python.org/downloads/
+1. Install 64-bit Python 3.6.x from https://www.python.org/downloads/
 
    Choose the option to add `python.exe` to the path.
+   
+   I suggest customising the installation to install to C:\Python36 (so there is no space in the path) and to install for all users.
 
 2. Open command prompt as admin, then ensure pip is up to date
     ```
