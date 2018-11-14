@@ -8,7 +8,8 @@ This script can be used as part of an automated regression testing framework to 
 
 ## Windows Installation
 
-Note that the version numbers specified are correct at time of writing. They are frequently updated so you might need to look for newer versions of the time files. Be sure to stick with Python 3.6.* and 32 bit.
+Note that the version numbers specified are correct at time of writing. They are frequently updated so you might need to look for newer versions of the time files. Be sure to stick with Python 3.6 and 32 bit.
+
 
 1. Install 32-bit Python 3.6.x from https://www.python.org/downloads/
 
@@ -36,6 +37,26 @@ Note that the version numbers specified are correct at time of writing. They are
     ```
     pip install numpy-1.14.6+mkl-cp36-cp36m-win32.whl
     ```
+
+Or just do this from the Administrator command prompt
+```
+python -m pip install --upgrade pip
+
+mkdir %temp%/searchimage
+cd %temp%/searchimage
+
+curl https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/opencv_python-3.4.3-cp36-cp36m-win32.whl
+curl https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/Pillow-3.4.2-cp36-cp36m-win32.whl
+curl https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/numpy-1.14.6+mkl-cp36-cp36m-win32.whl
+
+dir opencv* /b > _opencv.txt && set /P opencv=<_opencv.txt
+dir pillow* /b > _pillow.txt && set /P pillow=<_pillow.txt
+dir numpy* /b > _numpy.txt && set /P numpy=<_numpy.txt
+
+pip install %opencv%
+pip install %pillow%
+pip install %numpy%
+```
 
 ## Usage
 
