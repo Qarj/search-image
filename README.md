@@ -25,8 +25,8 @@ python search-image.py examples/100-orig.png examples/menu_hamburger.png
 
 ```
 cp examples/100-orig.png marked.png
-python3 search-image.py examples/100-orig.png examples/menu_hamburger.png marked.png
-python3 search-image.py examples/100-orig.png examples/content_vertical_mobile.png marked.png
+python search-image.py examples/100-orig.png examples/menu_hamburger.png marked.png
+python search-image.py examples/100-orig.png examples/content_vertical_mobile.png marked.png
 ```
 
 View `marked.png` (using Ubuntu)
@@ -73,7 +73,7 @@ Download `Miniconda3-latest-Linux-x86_64.sh`
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -P ~/Downloads/
 ```
 
-Intall Miniconda, accept all defaults
+Intall Miniconda, accept all defaults (press space a few times when in `more`)
 
 ```bash
 cd ~/Downloads
@@ -87,9 +87,9 @@ eval "$(/home/$USERNAME/miniconda3/bin/conda shell.bash hook)"
 conda init
 ```
 
-Restart shell.
+Close shell prompt and open a fresh one.
 
-At time of writing the miniconda version of opencv is not compatible with Python 3.8, so use 3.7.
+At time of writing the conda version of opencv is not compatible with Python 3.8, so use 3.7.
 
 ```bash
 conda create -n cv python=3.7.9
@@ -109,10 +109,11 @@ conda install Pillow
 Clone the repo and test
 
 ```bash
-mkdir ~/git & cd ~/git
+mkdir ~/git
+cd ~/git
 git clone https://github.com/Qarj/search-image.git
 cd search-image
-python3 search-image.py
+python search-image.py
 .
 Specify target image, followed by the image to search for.
 Example: search-image.py target_image.png image_to_find.png [markfile.png]
@@ -121,62 +122,48 @@ Example: search-image.py target_image.png image_to_find.png [markfile.png]
 
 ## Windows Installation
 
-Note that the version numbers specified are correct at time of writing. They are frequently updated so you might need to look for newer versions of the time files. Be sure to stick with Python 3.6 and 32 bit.
-
-Do this from the Administrator command prompt
+Open a command prompt
 
 ```
-python -m pip install --upgrade pip
-
-mkdir %temp%/searchimage
-cd %temp%/searchimage
-
-curl https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/opencv_python-3.4.3-cp36-cp36m-win32.whl
-curl https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/Pillow-3.4.2-cp36-cp36m-win32.whl
-curl https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/numpy-1.14.6+mkl-cp36-cp36m-win32.whl
-
-dir opencv* /b > _opencv.txt && set /P opencv=<_opencv.txt
-dir pillow* /b > _pillow.txt && set /P pillow=<_pillow.txt
-dir numpy* /b > _numpy.txt && set /P numpy=<_numpy.txt
-
-pip install %opencv%
-pip install %pillow%
-pip install %numpy%
+cd %userprofile%/Downloads
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe --output %userprofile%/Downloads/miniconda.exe
 ```
 
-Or do the manual installation
+Install miniconda, be sure to install for current user only, not all users. No need to add to path.
+```
+miniconda.exe
+```
 
-1. Install 32-bit Python 3.6.x from https://www.python.org/downloads/
+Now start the `Anaconda Prompt (miniconda3)` from the Start menu
 
-   Choose the option to add `python.exe` to the path.
-   
-   I suggest customising the installation to install to C:\Python36 (so there is no space in the path) and to install for all users.
-   Also delete any existing Python installation folders by hand (after uninstalling by Add / Remove Programs) since the left behind libraries will cause many problems.
+We want to create a Python 3.7 environment (Miniconda Python 3.8 incompatible with opencv at time of writing)
+```
+conda create -n cv python=3.7.9
+conda activate cv
+python --version
+.
+Python 3.7.9
+```
 
-2. Open command prompt as admin, then ensure pip is up to date
+Now install dependencies
 
-    ```
-    python -m pip install --upgrade pip
-    ```
+```
+conda install opencv
+conda install Pillow
+```
 
-3. Download python bindings for OpenCV, `opencv_python-3.4.3-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv (then change to the directory where it is downloaded to) and install
+Clone the repo and test
 
-    ```
-    pip install opencv_python-3.4.3-cp36-cp36m-win32.whl
-    ```
-
-4. Download Pillow, `Pillow-3.4.2-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#pillow and install
-
-    ```
-    pip install Pillow-3.4.2-cp36-cp36m-win32.whl
-    ```
-
-5. Download numpy (used by OpenCV), `numpy-1.14.6+mkl-cp36-cp36m-win32.whl`, from http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy and install
-
-    ```
-    pip install numpy-1.14.6+mkl-cp36-cp36m-win32.whl
-    ```
-
+```
+mkdir C:\git
+cd C:\git
+git clone https://github.com/Qarj/search-image.git
+cd search-image
+python search-image.py
+.
+Specify target image, followed by the image to search for.
+Example: search-image.py target_image.png image_to_find.png [markfile.png]
+```
 
 ## Additional Information
 
