@@ -134,7 +134,7 @@ Install miniconda, be sure to install for current user only, not all users. No n
 miniconda.exe
 ```
 
-Now start the `Anaconda Prompt (miniconda3)` from the Start menu
+Start the `Anaconda Prompt (miniconda3)` from the Start menu
 
 We want to create a Python 3.7 environment (Miniconda Python 3.8 incompatible with opencv at time of writing)
 ```
@@ -145,7 +145,7 @@ python --version
 Python 3.7.9
 ```
 
-Now install dependencies
+Install dependencies
 
 ```
 conda install opencv
