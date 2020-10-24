@@ -2,4 +2,6 @@
 
 output/
 temp/
+.vscode/
 marked_result.png
+marked.png
